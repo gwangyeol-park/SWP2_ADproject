@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import *
-from PyQt5.QtGui import *
 from PyQt5.QtCore import QDate
 import sys
+
 
 class sInputDialog(QDialog):
     def __init__(self):
@@ -15,6 +15,9 @@ class sInputDialog(QDialog):
     def setupUI(self):
         self.setGeometry(350, 350, 300, 100)
         self.setWindowTitle("추가")
+
+        ...
+
 
         label1 = QLabel("과제명: ")
         label2 = QLabel("중요도: ")
@@ -42,11 +45,6 @@ class sInputDialog(QDialog):
         self.pushButton1= QPushButton("완료")
         self.pushButton1.clicked.connect(self.pushButton1Clicked)
 
-        # 정보입력이 취소됬음을 알리는 버튼
-        self.pushButton2= QPushButton("취소")
-        self.pushButton2.clicked.connect(self.pushButton2Clicked)
-
-
         # 위에서 만든 라인에딧, 콤보박스, 데이트에딧을 레이아웃에 배치
         layout = QGridLayout()
         layout.addWidget(label1, 0, 0)
@@ -56,19 +54,18 @@ class sInputDialog(QDialog):
         layout.addWidget(label3, 2, 0)
         layout.addWidget(self.dateedit1, 2, 1)
         layout.addWidget(self.pushButton1, 3, 3)
-        #layout.addWidget(self.pushButton2, 3, 3)
 
         self.setLayout(layout)
-        #self.show()
 
     def pushButton1Clicked(self):
-
         self.subjectName = self.lineEdit1.text()
         self.priority = self.comboBox1.currentText()
         self.deadLine = self.dateedit1.date().toString("yyyy.MM.dd")
         self.close()
 
-    def pushButton2Clicked(self):
 
-        self.close()
+if __name__ == '__main__':
+   app = QApplication(sys.argv)
+   w = sInputDialog()
 
+   sys.exit(app.exec_())
