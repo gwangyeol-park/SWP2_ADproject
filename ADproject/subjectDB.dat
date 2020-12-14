@@ -1,1 +1,2 @@
-[{'subjectName': 'AD������Ʈ ����', 'priority': '��', 'deadLine': '2020.12.15'}]
+[{'subjectName': '창연공 최종 과제', 'priority': '상', 'deadLine': '2020.12.14', 'orderScore': 1}, {'subjectName': '소프AD', 'priority': '상', 'deadLine': '2020.12.15', 'orderScore': 2}, {'subjectName': '컬잉시험', 'priority': '중상', 'deadLine': '2020.12.14', 'orderScore': 4}, {'subjectName': '선대시험', 'priority': '상', 'deadLine': '2020.12.17', 'orderScore': 10}, {'subjectName': '소프시험', 'priority': '상', 'deadLine': '2020.12.10', 'orderScore': 17}]
+ 
